@@ -9,20 +9,20 @@ create table lectors(id int(10) not null auto_increment,
   engine = innoDB
   default character set = utf8;
 insert into lectors (name, degree, salary) values
-  ('Yakov Betrich', 'assistant', 800),                  #1
-  ('Elena Gorobec', 'assistant', 800),                  #2
-  ('Petro Sagaydak', 'associate professor', 1200),      #3
-  ('Mustafa Mabibulin', 'professor', 1800),             #4
-  ('Igor Kravec', 'assistant', 800),                    #5
-  ('Michael Vasyliev', 'associate professor', 1200),    #6
-  ('Katerina Sobol', 'professor', 1800),                #7
-  ('Mark Berdish', 'assistant', 800),                   #8
-  ('Olive Doga', 'assistant', 800),                     #9
-  ('Taras Michailuk', 'professor', 1800),               #10
-  ('Nikolette Faster', 'assistant', 800),               #11
-  ('Omar Barteluya', 'associate professor', 1200),      #12
-  ('Vladislav Orlov', 'assistant', 800),                #13
-  ('Aleksandr Boyko', 'associate professor', 1200);     #14
+  ('Yakov Betrich', 'ASSISTANT', 800),                  #1
+  ('Elena Gorobec', 'ASSISTANT', 800),                  #2
+  ('Petro Sagaydak', 'ASSOCIATE_PROFESSOR', 1200),      #3
+  ('Mustafa Mabibulin', 'PROFESSOR', 1800),             #4
+  ('Igor Kravec', 'ASSISTANT', 800),                    #5
+  ('Michael Vasyliev', 'ASSOCIATE_PROFESSOR', 1200),    #6
+  ('Katerina Sobol', 'PROFESSOR', 1800),                #7
+  ('Mark Berdish', 'ASSISTANT', 800),                   #8
+  ('Olive Doga', 'ASSISTANT', 800),                     #9
+  ('Taras Michailuk', 'PROFESSOR', 1800),               #10
+  ('Nikolette Faster', 'ASSISTANT', 800),               #11
+  ('Omar Barteluya', 'ASSOCIATE_PROFESSOR', 1200),      #12
+  ('Vladislav Orlov', 'ASSISTANT', 800),                #13
+  ('Aleksandr Boyko', 'ASSOCIATE_PROFESSOR', 1200);     #14
 
 drop table if exists departments;
 create table departments(id int(10) not null auto_increment,
@@ -32,11 +32,11 @@ create table departments(id int(10) not null auto_increment,
   engine = innoDB
   default character set = utf8;
 insert into departments (name_department, head_department) values
-  ('head_department_1', 'physic_department'),
-  ('head_department_1', 'mathematics_department'),
-  ('head_department_1', 'chemistry_department'),
-  ('head_department_1', 'biology_department'),
-  ('head_department_1', 'economic_department');
+  ('physic', 'Lisa Molisa'),
+  ('mathematics', 'Dan Balan'),
+  ('chemistry', 'Boris Noris'),
+  ('biology', 'Mark Shtein'),
+  ('economic', 'Anna Morison');
 
 drop table if exists lectors_department;
 create table lectors_department(lectors_id int(10),

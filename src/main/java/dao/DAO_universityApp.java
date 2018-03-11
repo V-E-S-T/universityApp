@@ -5,6 +5,10 @@ import model.Lector;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class DAO_universityApp {
@@ -20,19 +24,24 @@ public class DAO_universityApp {
         this.sessionFactory = sessionFactory;
     }
 
-    public Set<Department> getDepartments() {
+    public List<Department> getDepartments() {
 
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = this.sessionFactory.openSession();
         Criteria criteria = session.createCriteria(Department.class);
+        //departmentSet.addAll(criteria.list());
+        //session.close();
 
-        return (Set<Department>)criteria.list();
+        return new ArrayList<Department>(criteria.list());
     }
 
-    public Set<Lector> getLectors() {
+    public List<Lector> getLectors() {
 
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = this.sessionFactory.openSession();
         Criteria criteria = session.createCriteria(Lector.class);
+//        Set<Lector> lectorSet = new HashSet<>();
+//        lectorSet.addAll(criteria.list());
+        //session.close();
 
-        return (Set<Lector>)criteria.list();
+        return new ArrayList<Lector>(criteria.list());
     }
 }

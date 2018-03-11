@@ -51,52 +51,74 @@ public class Main {
 
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)))
         {
-            System.out.println("Please, enter 1 if you want see HEAD OF DEPARTMENT\n" +
-                               "Please, enter 2 if you want see DEPARTMENT STATISTIC\n" +
-                               "Please, enter 3 if you want see AVERAGE SALARY OF DEPARTMENT\n" +
-                               "Please, enter 4 if you want see COUNT OF EMPLOYEE FOR DEPARTMENT\n" +
-                               "Please, enter 5 for GLOBAL SEARCH");
-            String commandName = reader.readLine();
-            switch (commandName)
+            String commandName;
+            while (true)
             {
-                case "1":
+                System.out.println("Please, enter 1 if you want see HEAD OF DEPARTMENT\n" +
+                        "Please, enter 2 if you want see DEPARTMENT STATISTIC\n" +
+                        "Please, enter 3 if you want see AVERAGE SALARY OF DEPARTMENT\n" +
+                        "Please, enter 4 if you want see COUNT OF EMPLOYEE FOR DEPARTMENT\n" +
+                        "Please, enter 5 for GLOBAL SEARCH\n" +
+                        "Please, enter 6 for EXIT");
+
+                commandName = reader.readLine();
+
+                switch (commandName)
                 {
-                    System.out.println("Please, enter DEPARTMENT NAME");
-                    String departmentName = reader.readLine();
-                    System.out.println(
-                           department_services.getHeadOfDepartment(departmentName));
-                }
-                case "2":
-                {
-                    System.out.println("Please, enter DEPARTMENT NAME");
-                    String departmentName = reader.readLine();
-                    System.out.println(
-                           department_services.showStatistic(departmentName));
-                }
-                case "3":
-                {
-                    System.out.println("Please, enter DEPARTMENT NAME");
-                    String departmentName = reader.readLine();
-                    //System.out.println(
-                    //       department_services.getHeadOfDepartment(departmentName));
-                }
-                case "4":
-                {
-                    System.out.println("Please, enter DEPARTMENT NAME");
-                    String departmentName = reader.readLine();
+                    case "1":
+                    {
+                        System.out.println("HEAD OF DEPARTMENT: Please, enter DEPARTMENT NAME");
+                        String departmentName = reader.readLine();
+                        System.out.println(
+                                department_services.getHeadOfDepartment(departmentName));
+                    }
+                    case "2":
+                    {
+                        System.out.println("DEPARTMENT STATISTIC: Please, enter DEPARTMENT NAME:\n" +
+                                            "physic\n" +
+                                            "mathematics\n" +
+                                            "chemistry\n" +
+                                            "biology\n" +
+                                            "economic");
+                        String departmentName = reader.readLine();
+                        System.out.println(
+                                department_services.showStatistic(departmentName));
+                    }
+                    case "3":
+                    {
+                        System.out.println("AVERAGE SALARY OF DEPARTMENT: Please, enter DEPARTMENT NAME");
+                        //String departmentName = reader.readLine();
+                        //System.out.println(
+                        //       department_services.getHeadOfDepartment(departmentName));
+                    }
+                    case "4":
+                    {
+                        System.out.println("COUNT OF EMPLOYEE FOR DEPARTMENT: Please, enter DEPARTMENT NAME");
+                        //String departmentName = reader.readLine();
 //                    System.out.println(
 //                           department_services.getHeadOfDepartment(departmentName));
-                }
-                case "5":
-                {
-                    System.out.println("Please, enter your QUERY FOR GLOBAL SEARCH");
-                    String departmentName = reader.readLine();
+                    }
+                    case "5":
+                    {
+                        System.out.println("GLOBAL SEARCH: Please, enter your QUERY FOR GLOBAL SEARCH");
+                        //String departmentName = reader.readLine();
 //                    System.out.println(
 //                           department_services.getHeadOfDepartment(departmentName));
+                    }
+                    case "6":
+                    {
+                        System.out.println("EXIT program");
+                        System.exit(0);
+                    }
+                    default:
+                        System.out.println("Invalid command. Try again");
                 }
-                default:
-                    System.out.println("Invalid command. Try again");
             }
+        }
+        catch (Exception e)
+        {
+            System.out.println("ERROR");
+            e.printStackTrace();
         }
     }
 }
