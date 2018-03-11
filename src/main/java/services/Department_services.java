@@ -23,8 +23,7 @@ public class Department_services {
     public String getHeadOfDepartment(String departmentName)
     {
         Department department = getDepartmentByName(departmentName);
-        //departmentList.forEach((department) -> );
-        //departmentList.stream().filter(department ->  (department.getHead_department()).equals(departmentName));
+
         if (null != department)
         {
             return "Head of " + departmentName + " department is " + department.getHead_department();
@@ -39,25 +38,9 @@ public class Department_services {
 
         if (null != department)
         {
-//            Map<Degree, Long> statistic = department.getLectors().stream()
-//                                .collect(Collectors.groupingBy(Lector::getDegree, Collectors.counting()));
-//            return statistic != null ? statistic.entrySet().stream()
-//                    .map(entry -> entry.getKey().toString() + " - " + entry.getValue())
-//                    .collect(Collectors.joining("\n")) : "No statistic for this department";
-
             Map<Degree, List<Lector>> lectorsByDegree = department.getLectors().stream()
                     .collect(Collectors.groupingBy(Lector :: getDegree));
-//            for (Lector lector : department.getLectors())
-//            {
-//                System.out.println(lector.getName());
-//            }
-//            for (Map.Entry<Degree, List<Lector>> r : lectorsByDegree.entrySet())
-//            {
-//                for (Lector lector : r.getValue())
-//                {
-//                    System.out.println(r.getKey().toString() + " - " + r.getValue());
-//                }
-//            }
+
             return lectorsByDegree != null ? lectorsByDegree.entrySet().stream()
                     .map(entry -> entry.getKey().toString() + " - " + entry.getValue().size())
                     .collect(Collectors.joining("\n")) : "No statistic for this department";
@@ -85,10 +68,7 @@ public class Department_services {
     {
         String resultSearch = lectorList.stream().filter(lector -> lector.getName().toLowerCase().contains(template))
                 .map(Lector::getName).collect(Collectors.joining(", "));
-        //lectorList.forEach(lector -> lector.getName().contains(template) ? System.out.println(lector) : );
         return !Objects.equals(resultSearch, "") ? resultSearch : "Nothing found";
-
-        //return String.valueOf(department != null ? department.getLectors().size() : 0);
     }
 
     public static void enterDepartmentNameMessage()
