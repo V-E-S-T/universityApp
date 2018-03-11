@@ -67,43 +67,43 @@ public class Main {
                 {
                     case "1":
                     {
-                        System.out.println("HEAD OF DEPARTMENT: Please, enter DEPARTMENT NAME");
+                        Department_services.enterDepartmentNameMessage();
                         String departmentName = reader.readLine();
                         System.out.println(
                                 department_services.getHeadOfDepartment(departmentName));
+                        break;
                     }
                     case "2":
                     {
-                        System.out.println("DEPARTMENT STATISTIC: Please, enter DEPARTMENT NAME:\n" +
-                                            "physic\n" +
-                                            "mathematics\n" +
-                                            "chemistry\n" +
-                                            "biology\n" +
-                                            "economic");
+                        Department_services.enterDepartmentNameMessage();
                         String departmentName = reader.readLine();
                         System.out.println(
                                 department_services.showStatistic(departmentName));
+                        break;
                     }
                     case "3":
                     {
-                        System.out.println("AVERAGE SALARY OF DEPARTMENT: Please, enter DEPARTMENT NAME");
-                        //String departmentName = reader.readLine();
-                        //System.out.println(
-                        //       department_services.getHeadOfDepartment(departmentName));
+                        Department_services.enterDepartmentNameMessage();
+                        String departmentName = reader.readLine();
+                        System.out.println(
+                               department_services.averageSalary(departmentName));
+                        break;
                     }
                     case "4":
                     {
-                        System.out.println("COUNT OF EMPLOYEE FOR DEPARTMENT: Please, enter DEPARTMENT NAME");
-                        //String departmentName = reader.readLine();
-//                    System.out.println(
-//                           department_services.getHeadOfDepartment(departmentName));
+                        Department_services.enterDepartmentNameMessage();
+                        String departmentName = reader.readLine();
+                        System.out.println(
+                               department_services.countOfEmployee(departmentName));
+                        break;
                     }
                     case "5":
                     {
                         System.out.println("GLOBAL SEARCH: Please, enter your QUERY FOR GLOBAL SEARCH");
-                        //String departmentName = reader.readLine();
-//                    System.out.println(
-//                           department_services.getHeadOfDepartment(departmentName));
+                        String template = reader.readLine();
+                        System.out.println(
+                               department_services.globalSearch(template));
+                        break;
                     }
                     case "6":
                     {
