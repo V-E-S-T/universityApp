@@ -26,15 +26,15 @@ public class Main {
                 {
                     case "1":
                     {
-                        Department_services.enterDepartmentNameMessage();
+                        Department_services.enterName();
                         String departmentName = reader.readLine();
                         System.out.println(
-                                department_services.getHeadOfDepartment(departmentName));
+                                department_services.getHead(departmentName));
                         break;
                     }
                     case "2":
                     {
-                        Department_services.enterDepartmentNameMessage();
+                        Department_services.enterName();
                         String departmentName = reader.readLine();
                         System.out.println(
                                 department_services.showStatistic(departmentName));
@@ -42,18 +42,18 @@ public class Main {
                     }
                     case "3":
                     {
-                        Department_services.enterDepartmentNameMessage();
+                        Department_services.enterName();
                         String departmentName = reader.readLine();
                         System.out.println(
-                               department_services.averageSalary(departmentName));
+                                department_services.averageSalary(departmentName));
                         break;
                     }
                     case "4":
                     {
-                        Department_services.enterDepartmentNameMessage();
+                        Department_services.enterName();
                         String departmentName = reader.readLine();
                         System.out.println(
-                               department_services.countOfEmployee(departmentName));
+                                department_services.countOfEmployee(departmentName));
                         break;
                     }
                     case "5":
@@ -61,7 +61,7 @@ public class Main {
                         System.out.println("GLOBAL SEARCH: Please, enter your QUERY FOR GLOBAL SEARCH");
                         String template = reader.readLine();
                         System.out.println(
-                               department_services.globalSearch(template));
+                                department_services.globalSearch(template));
                         break;
                     }
                     case "6":

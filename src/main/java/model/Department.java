@@ -14,16 +14,16 @@ public class Department  implements Serializable {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name_department")
-    private String name_department;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "head_department")
-    private String head_department;
+    @Column(name = "head")
+    private String head;
 
     @ManyToMany
     @JoinTable(name = "lectors_department",
-    joinColumns = @JoinColumn(name = "department_id"),
-    inverseJoinColumns = @JoinColumn(name = "lectors_id"))
+            joinColumns = @JoinColumn(name = "department_id"),
+            inverseJoinColumns = @JoinColumn(name = "lectors_id"))
     private Set<Lector> lectors = new HashSet<Lector>();
 
     public Set<Lector> getLectors() {
@@ -38,23 +38,23 @@ public class Department  implements Serializable {
         return id;
     }
 
-    public String getName_department() {
-        return name_department;
+    public String getName() {
+        return name;
     }
 
-    public String getHead_department() {
-        return head_department;
+    public String getHead() {
+        return head;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setName_department(String name_department) {
-        this.name_department = name_department;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setHead_department(String head_department) {
-        this.head_department = head_department;
+    public void setHead(String head) {
+        this.head = head;
     }
 }

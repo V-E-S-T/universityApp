@@ -18,3 +18,13 @@
 2018-03-11 21:40:34,054 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:163] HHH000006: Autocommit mode: false
 2018-03-11 21:40:34,055 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:85] HHH000115: Hibernate connection pool size: 20 (min=1)
 2018-03-11 21:40:34,346 INFO  Dialect [Dialect.java:154] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-18 11:12:26,794 INFO  Version [Version.java:37] HHH000412: Hibernate Core {5.0.1.Final}
+2018-03-18 11:12:26,799 INFO  Environment [Environment.java:213] HHH000206: hibernate.properties not found
+2018-03-18 11:12:26,801 INFO  Environment [Environment.java:317] HHH000021: Bytecode provider name : javassist
+2018-03-18 11:12:27,109 INFO  Version [JavaReflectionManager.java:66] HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+2018-03-18 11:12:27,174 WARN  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:76] HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2018-03-18 11:12:27,179 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:149] HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/university]
+2018-03-18 11:12:27,180 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:158] HHH000046: Connection properties: {user=root, password=****}
+2018-03-18 11:12:27,181 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:163] HHH000006: Autocommit mode: false
+2018-03-18 11:12:27,183 INFO  DriverManagerConnectionProviderImpl [DriverManagerConnectionProviderImpl.java:85] HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-03-18 11:12:27,477 INFO  Dialect [Dialect.java:154] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
